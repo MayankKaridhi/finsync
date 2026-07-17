@@ -1,0 +1,40 @@
+{
+  "name": "finsync",
+  "version": "1.0.0",
+  "description": "FinSync — an event-driven payment integration microservice: a secured webhook gateway that validates, transforms, and forwards transaction events to a downstream accounting system with retry/backoff and dead-lettering.",
+  "main": "src/server.js",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "mock": "node mock/accountingServer.js",
+    "test": "node --test \"test/*.test.js\"",
+    "e2e": "node test/e2e.runner.js"
+  },
+  "keywords": [
+    "integration",
+    "webhook",
+    "express",
+    "middleware",
+    "payments",
+    "data-transformation",
+    "axios",
+    "microservice",
+    "fintech"
+  ],
+  "author": "Mayank Karidhi",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^1.7.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "helmet": "^7.1.0",
+    "winston": "^3.13.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.0"
+  }
+}
